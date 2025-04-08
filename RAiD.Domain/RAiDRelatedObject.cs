@@ -9,11 +9,11 @@ namespace RAiD.Domain;
 
 public class RAiDRelatedObject
 {
-    [JsonPropertyName("id")] public string? Id { get; set; }
+    [JsonPropertyName("id")] public string? Id { get; init; }
 
-    [JsonPropertyName("schemaUri")] public string? SchemaUri { get; set; }
+    [JsonPropertyName("schemaUri")] public string? SchemaUri { get; init; }
 
-    [JsonPropertyName("type")] public RAiDRelatedObjectType? Type { get; set; }
+    [JsonPropertyName("type")] public RAiDRelatedObjectType? Type { get; init; }
 
-    [JsonPropertyName("category")] public List<RAiDRelatedObjectCategory>? Category { get; set; }
+    [JsonPropertyName("category")] public List<RAiDRelatedObjectCategory>? Category { get; init; }
 }

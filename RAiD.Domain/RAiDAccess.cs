@@ -9,9 +9,9 @@ namespace RAiD.Domain;
 
 public class RAiDAccess
 {
-    [JsonPropertyName("type")] public required RAiDAccessType Type { get; set; }
+    [JsonPropertyName("type")] public required RAiDAccessType Type { get; init; }
 
-    [JsonPropertyName("statement")] public RAiDAccessStatement? Statement { get; set; }
+    [JsonPropertyName("statement")] public RAiDAccessStatement? Statement { get; init; }
 
-    [JsonPropertyName("embargoExpiry")] public string? EmbargoExpiry { get; set; }
+    [JsonPropertyName("embargoExpiry")] public string? EmbargoExpiry { get; init; }
 }

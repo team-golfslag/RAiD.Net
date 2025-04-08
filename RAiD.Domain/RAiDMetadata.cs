@@ -9,7 +9,7 @@ namespace RAiD.Domain;
 
 public class RAiDMetadata
 {
-    [JsonPropertyName("created")] public double? Created { get; set; }
+    [JsonPropertyName("created")] public double? Created { get; init; }
 
-    [JsonPropertyName("updated")] public double? Updated { get; set; }
+    [JsonPropertyName("updated")] public double? Updated { get; init; }
 }

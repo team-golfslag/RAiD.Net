@@ -9,7 +9,7 @@ namespace RAiD.Domain;
 
 public class RAiDSpatialCoveragePlace
 {
-    [JsonPropertyName("text")] public string? Text { get; set; }
+    [JsonPropertyName("text")] public string? Text { get; init; }
 
-    [JsonPropertyName("language")] public RAiDLanguage? Language { get; set; }
+    [JsonPropertyName("language")] public RAiDLanguage? Language { get; init; }
 }

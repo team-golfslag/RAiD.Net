@@ -9,7 +9,7 @@ namespace RAiD.Domain;
 
 public class RAiDRegistrationAgency
 {
-    [JsonPropertyName("id")] public required string Id { get; set; }
+    [JsonPropertyName("id")] public required string Id { get; init; }
 
-    [JsonPropertyName("schemaUri")] public required string SchemaUri { get; set; }
+    [JsonPropertyName("schemaUri")] public required string SchemaUri { get; init; }
 }

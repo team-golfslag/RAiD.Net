@@ -9,9 +9,9 @@ namespace RAiD.Domain;
 
 public class RAiDValidationFailure
 {
-    [JsonPropertyName("fieldId")] public required string FieldId { get; set; }
+    [JsonPropertyName("fieldId")] public required string FieldId { get; init; }
 
-    [JsonPropertyName("errorType")] public required string ErrorType { get; set; }
+    [JsonPropertyName("errorType")] public required string ErrorType { get; init; }
 
-    [JsonPropertyName("message")] public required string Message { get; set; }
+    [JsonPropertyName("message")] public required string Message { get; init; }
 }

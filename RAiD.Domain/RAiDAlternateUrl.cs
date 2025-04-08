@@ -9,5 +9,5 @@ namespace RAiD.Domain;
 
 public class RAiDAlternateUrl
 {
-    [JsonPropertyName("url")] public required string Url { get; set; }
+    [JsonPropertyName("url")] public required string Url { get; init; }
 }

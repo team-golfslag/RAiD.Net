@@ -10,9 +10,9 @@ namespace RAiD.Domain;
 public class RAiDPermissionsDto
 {
     [JsonPropertyName("servicePointMatch")]
-    public bool? ServicePointMatch { get; set; }
+    public bool? ServicePointMatch { get; init; }
 
-    [JsonPropertyName("read")] public bool? Read { get; set; }
+    [JsonPropertyName("read")] public bool? Read { get; init; }
 
-    [JsonPropertyName("write")] public bool? Write { get; set; }
+    [JsonPropertyName("write")] public bool? Write { get; init; }
 }

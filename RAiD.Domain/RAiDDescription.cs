@@ -9,9 +9,9 @@ namespace RAiD.Domain;
 
 public class RAiDDescription
 {
-    [JsonPropertyName("text")] public required string Text { get; set; }
+    [JsonPropertyName("text")] public required string Text { get; init; }
 
-    [JsonPropertyName("type")] public required RAiDDescriptionType Type { get; set; }
+    [JsonPropertyName("type")] public required RAiDDescriptionType Type { get; init; }
 
-    [JsonPropertyName("language")] public RAiDLanguage? Language { get; set; }
+    [JsonPropertyName("language")] public RAiDLanguage? Language { get; init; }
 }

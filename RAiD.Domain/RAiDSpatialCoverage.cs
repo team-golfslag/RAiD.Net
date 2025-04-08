@@ -9,9 +9,9 @@ namespace RAiD.Domain;
 
 public class RAiDSpatialCoverage
 {
-    [JsonPropertyName("id")] public string? Id { get; set; }
+    [JsonPropertyName("id")] public string? Id { get; init; }
 
-    [JsonPropertyName("schemaUri")] public string? SchemaUri { get; set; }
+    [JsonPropertyName("schemaUri")] public string? SchemaUri { get; init; }
 
-    [JsonPropertyName("place")] public List<RAiDSpatialCoveragePlace>? Place { get; set; }
+    [JsonPropertyName("place")] public List<RAiDSpatialCoveragePlace>? Place { get; init; }
 }
