@@ -6,8 +6,4 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
-    <ItemGroup>
-        <ProjectReference Include="..\RAiD.Client.Helpers\RAiD.Client.Helpers.csproj"/>
-    </ItemGroup>
-
 </Project>

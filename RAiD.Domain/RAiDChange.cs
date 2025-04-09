@@ -9,11 +9,11 @@ namespace RAiD.Domain;
 
 public class RAiDChange
 {
-    [JsonPropertyName("handle")] public string? Handle { get; set; }
+    [JsonPropertyName("handle")] public string? Handle { get; init; }
 
-    [JsonPropertyName("version")] public int? Version { get; set; }
+    [JsonPropertyName("version")] public int? Version { get; init; }
 
-    [JsonPropertyName("diff")] public string? Diff { get; set; }
+    [JsonPropertyName("diff")] public string? Diff { get; init; }
 
-    [JsonPropertyName("timestamp")] public DateTime? Timestamp { get; set; }
+    [JsonPropertyName("timestamp")] public DateTime? Timestamp { get; init; }
 }

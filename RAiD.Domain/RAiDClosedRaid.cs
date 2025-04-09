@@ -9,7 +9,7 @@ namespace RAiD.Domain;
 
 public class RAiDClosedRaid
 {
-    [JsonPropertyName("identifier")] public RAiDId? Identifier { get; set; }
+    [JsonPropertyName("identifier")] public RAiDId? Identifier { get; init; }
 
-    [JsonPropertyName("access")] public RAiDAccess? Access { get; set; }
+    [JsonPropertyName("access")] public RAiDAccess? Access { get; init; }
 }

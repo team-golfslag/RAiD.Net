@@ -9,9 +9,9 @@ namespace RAiD.Domain;
 
 public class RAiDOrganisation
 {
-    [JsonPropertyName("id")] public required string Id { get; set; }
+    [JsonPropertyName("id")] public required string Id { get; init; }
 
-    [JsonPropertyName("schemaUri")] public required string SchemaUri { get; set; }
+    [JsonPropertyName("schemaUri")] public required string SchemaUri { get; init; }
 
-    [JsonPropertyName("role")] public required List<RAiDOrganisationRole> Role { get; set; }
+    [JsonPropertyName("role")] public required List<RAiDOrganisationRole> Role { get; init; }
 }

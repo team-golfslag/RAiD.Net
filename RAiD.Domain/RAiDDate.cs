@@ -4,12 +4,17 @@
 // © Copyright Utrecht University (Department of Information and Computing Sciences)
 
 using System.Text.Json.Serialization;
+using RAiD.Client.Helpers;
 
 namespace RAiD.Domain;
 
 public class RAiDDate
 {
-    [JsonPropertyName("startDate")] public required DateTime StartDate { get; set; }
+    [JsonConverter(typeof(RAiDDateConverter))]
+    [JsonPropertyName("startDate")]
+    public required DateTime StartDate { get; init; }
 
-    [JsonPropertyName("endDate")] public DateTime? EndDate { get; set; }
+    [JsonConverter(typeof(RAiDDateConverter))]
+    [JsonPropertyName("endDate")]
+    public DateTime? EndDate { get; init; }
 }

@@ -9,15 +9,15 @@ namespace RAiD.Domain;
 
 public class RAiDValidationFailureResponse
 {
-    [JsonPropertyName("failures")] public required List<RAiDValidationFailure> Failures { get; set; }
+    [JsonPropertyName("failures")] public required List<RAiDValidationFailure> Failures { get; init; }
 
-    [JsonPropertyName("type")] public required string Type { get; set; }
+    [JsonPropertyName("type")] public required string Type { get; init; }
 
-    [JsonPropertyName("title")] public required string Title { get; set; }
+    [JsonPropertyName("title")] public required string Title { get; init; }
 
-    [JsonPropertyName("status")] public required int Status { get; set; }
+    [JsonPropertyName("status")] public required int Status { get; init; }
 
-    [JsonPropertyName("detail")] public required string Detail { get; set; }
+    [JsonPropertyName("detail")] public required string Detail { get; init; }
 
-    [JsonPropertyName("instance")] public required string Instance { get; set; }
+    [JsonPropertyName("instance")] public required string Instance { get; init; }
 }

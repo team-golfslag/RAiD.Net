@@ -9,18 +9,18 @@ namespace RAiD.Domain;
 
 public class RAiDId
 {
-    [JsonPropertyName("id")] public required string IdValue { get; set; }
+    [JsonPropertyName("id")] public required string IdValue { get; init; }
 
-    [JsonPropertyName("schemaUri")] public required string SchemaUri { get; set; }
+    [JsonPropertyName("schemaUri")] public required string SchemaUri { get; init; }
 
     [JsonPropertyName("registrationAgency")]
-    public required RAiDRegistrationAgency RegistrationAgency { get; set; }
+    public required RAiDRegistrationAgency RegistrationAgency { get; init; }
 
-    [JsonPropertyName("owner")] public required RAiDOwner Owner { get; set; }
+    [JsonPropertyName("owner")] public required RAiDOwner Owner { get; init; }
 
-    [JsonPropertyName("raidAgencyUrl")] public string? RaidAgencyUrl { get; set; }
+    [JsonPropertyName("raidAgencyUrl")] public string? RaidAgencyUrl { get; init; }
 
-    [JsonPropertyName("license")] public required string License { get; set; }
+    [JsonPropertyName("license")] public required string License { get; init; }
 
-    [JsonPropertyName("version")] public required int Version { get; set; }
+    [JsonPropertyName("version")] public required int Version { get; init; }
 }

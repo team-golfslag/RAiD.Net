@@ -9,5 +9,5 @@ namespace RAiD.Domain;
 
 public class RAiDPatchRequest
 {
-    [JsonPropertyName("contributor")] public List<RAiDContributor>? Contributor { get; set; }
+    [JsonPropertyName("contributor")] public List<RAiDContributor>? Contributor { get; init; }
 }

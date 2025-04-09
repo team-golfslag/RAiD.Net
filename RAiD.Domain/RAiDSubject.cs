@@ -9,9 +9,9 @@ namespace RAiD.Domain;
 
 public class RAiDSubject
 {
-    [JsonPropertyName("id")] public required string Id { get; set; }
+    [JsonPropertyName("id")] public required string Id { get; init; }
 
-    [JsonPropertyName("schemaUri")] public required string SchemaUri { get; set; }
+    [JsonPropertyName("schemaUri")] public required string SchemaUri { get; init; }
 
-    [JsonPropertyName("keyword")] public List<RAiDSubjectKeyword>? Keyword { get; set; }
+    [JsonPropertyName("keyword")] public List<RAiDSubjectKeyword>? Keyword { get; init; }
 }

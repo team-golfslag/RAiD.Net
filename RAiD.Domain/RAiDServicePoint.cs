@@ -9,25 +9,25 @@ namespace RAiD.Domain;
 
 public class RAiDServicePoint
 {
-    [JsonPropertyName("id")] public required long Id { get; set; }
+    [JsonPropertyName("id")] public required long Id { get; init; }
 
-    [JsonPropertyName("name")] public required string Name { get; set; }
+    [JsonPropertyName("name")] public required string Name { get; init; }
 
-    [JsonPropertyName("identifierOwner")] public required string IdentifierOwner { get; set; }
+    [JsonPropertyName("identifierOwner")] public required string IdentifierOwner { get; init; }
 
-    [JsonPropertyName("repositoryId")] public string? RepositoryId { get; set; }
+    [JsonPropertyName("repositoryId")] public string? RepositoryId { get; init; }
 
-    [JsonPropertyName("prefix")] public string? Prefix { get; set; }
+    [JsonPropertyName("prefix")] public string? Prefix { get; init; }
 
-    [JsonPropertyName("groupId")] public string? GroupId { get; set; }
+    [JsonPropertyName("groupId")] public string? GroupId { get; init; }
 
-    [JsonPropertyName("searchContent")] public string? SearchContent { get; set; }
+    [JsonPropertyName("searchContent")] public string? SearchContent { get; init; }
 
-    [JsonPropertyName("techEmail")] public required string TechEmail { get; set; }
+    [JsonPropertyName("techEmail")] public required string TechEmail { get; init; }
 
-    [JsonPropertyName("adminEmail")] public required string AdminEmail { get; set; }
+    [JsonPropertyName("adminEmail")] public required string AdminEmail { get; init; }
 
-    [JsonPropertyName("enabled")] public required bool Enabled { get; set; }
+    [JsonPropertyName("enabled")] public required bool Enabled { get; init; }
 
-    [JsonPropertyName("appWritesEnabled")] public bool? AppWritesEnabled { get; set; }
+    [JsonPropertyName("appWritesEnabled")] public bool? AppWritesEnabled { get; init; }
 }

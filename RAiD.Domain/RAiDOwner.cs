@@ -9,9 +9,9 @@ namespace RAiD.Domain;
 
 public class RAiDOwner
 {
-    [JsonPropertyName("id")] public required string Id { get; set; }
+    [JsonPropertyName("id")] public required string Id { get; init; }
 
-    [JsonPropertyName("schemaUri")] public required string SchemaUri { get; set; }
+    [JsonPropertyName("schemaUri")] public required string SchemaUri { get; init; }
 
-    [JsonPropertyName("servicePoint")] public long? ServicePoint { get; set; }
+    [JsonPropertyName("servicePoint")] public long? ServicePoint { get; init; }
 }
