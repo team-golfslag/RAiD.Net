@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>RAiD.Net</id>
+
+        <authors>Conflux</authors>
+        <owners>Conflux</owners>
+        
+        <version>1.0.0</version>
+
+        <description>
+            A single NuGet package bundling RAiD.Domain, RAiD.Client, and RAiD.Client.Helpers assemblies.
+        </description>
+
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <projectUrl>https://github.com/team-golfslag/RAiD.Net</projectUrl>
+    </metadata>
+
+    <files>
+        <file src="RAiD.Domain\bin\Release\net9.0\RAiD.Domain.dll"
+              target="lib\net9.0" />
+        <file src="RAiD.Client\bin\Release\net9.0\RAiD.Client.dll"
+              target="lib\net9.0" />
+        <file src="RAiD.Client.Helpers\bin\Release\net9.0\RAiD.Client.Helpers.dll"
+              target="lib\net9.0" />
+    </files>
+</package>
