@@ -8,7 +8,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\RAiD.Domain\RAiD.Domain.csproj"/>
+        <ProjectReference Include="..\RAiD.Net.Domain\RAiD.Net.Domain.csproj" />
     </ItemGroup>
 
 </Project>

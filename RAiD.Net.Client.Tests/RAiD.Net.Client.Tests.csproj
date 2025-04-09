@@ -21,7 +21,7 @@
 
     <ItemGroup>
         <ProjectReference Include="..\RAiD.Net.Client\RAiD.Net.Client.csproj" />
-        <ProjectReference Include="..\RAiD.Domain\RAiD.Domain.csproj"/>
+        <ProjectReference Include="..\RAiD.Net.Domain\RAiD.Net.Domain.csproj" />
     </ItemGroup>
 
 </Project>
