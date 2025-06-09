@@ -17,6 +17,14 @@ public interface IRAiDService
     /// Call this before calling other methods if authentication is required.
     /// </summary>
     void SetBearerToken(string bearerToken);
+    
+    /// <summary>
+    /// Sets the username and password for authentication.
+    /// Call this before calling other methods if authentication is required.
+    /// </summary>
+    /// <param name="username">The username for authentication.</param>
+    /// <param name="password">The password for authentication.</param>
+    Task SetUsernameAndPassword(string username, string password);
 
     #region ServicePoint endpoints
 

@@ -14,4 +14,9 @@ public class RAiDServiceOptions
     /// The base URL for the RAiD service.
     /// </summary>
     public string BaseUrl { get; set; } = "https://api.demo.raid.org.au/";
+    
+    /// <summary>
+    /// The authentication URL for the RAiD service.
+    /// /// </summary>
+    public string AuthUrl { get; set; } = "https://auth.demo.raid.org.au/realms/RAiD/protocol/openid-connect/token";
 }
