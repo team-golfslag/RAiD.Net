@@ -22,10 +22,9 @@ public interface IRAiDService
     /// Sets the username and password for authentication.
     /// Call this before calling other methods if authentication is required.
     /// </summary>
-    /// <param name="authUrl">The authentication URL to use.</param>
     /// <param name="username">The username for authentication.</param>
     /// <param name="password">The password for authentication.</param>
-    Task SetUsernameAndPassword(string authUrl, string username, string password);
+    Task SetUsernameAndPassword(string username, string password);
 
     #region ServicePoint endpoints
 

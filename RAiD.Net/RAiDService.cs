@@ -18,10 +18,10 @@ public class RAiDService : IRAiDService
     private readonly HttpClient _httpClient;
     private readonly ILogger<RAiDService> _logger;
     private string? _bearerToken;
-    
+
+    private string _authUrl;
     private string? _basicAuthUsername;
     private string? _basicAuthPassword;
-    private string? _authUrl;
 
     public RAiDService(
         HttpClient httpClient,
@@ -33,6 +33,7 @@ public class RAiDService : IRAiDService
 
         // configure base address from options
         _httpClient.BaseAddress = new(options.Value.BaseUrl);
+        _authUrl = options.Value.AuthUrl;
     }
 
     /// <inheritdoc/>
@@ -46,16 +47,13 @@ public class RAiDService : IRAiDService
             new("Bearer", bearerToken);
     }
 
-    public async Task SetUsernameAndPassword(string authUrl, string username, string password)
+    public async Task SetUsernameAndPassword(string username, string password)
     {
-        if (string.IsNullOrWhiteSpace(authUrl))
-            throw new ArgumentException("Authentication URL cannot be null or empty", nameof(authUrl));
         if (string.IsNullOrWhiteSpace(username))
             throw new ArgumentException("Username cannot be null or empty", nameof(username));
         if (string.IsNullOrWhiteSpace(password))
             throw new ArgumentException("Password cannot be null or empty", nameof(password));
         
-        _authUrl = authUrl;
         _basicAuthPassword = password;
         _basicAuthUsername = username;
 
@@ -82,7 +80,6 @@ public class RAiDService : IRAiDService
         catch (HttpRequestException e)
         {
             _logger.LogError(e, "Authentication failed for user {Username}", username);
-            _authUrl = null;
             _basicAuthUsername = null;
             _basicAuthPassword = null;
             
@@ -105,9 +102,9 @@ public class RAiDService : IRAiDService
         }
         catch (HttpRequestException e)
         {
-            if (e.StatusCode == HttpStatusCode.Unauthorized && _authUrl != null && !retry)
+            if (e.StatusCode == HttpStatusCode.Unauthorized && _basicAuthUsername != null && !retry)
             {
-                await SetUsernameAndPassword(_authUrl, _basicAuthUsername!, _basicAuthPassword!);
+                await SetUsernameAndPassword(_basicAuthUsername, _basicAuthPassword!);
                 // Retry the request after re-authentication
                 return await SendGetAsync<T>(url, true);
             }
@@ -143,9 +140,9 @@ public class RAiDService : IRAiDService
         }
         catch (HttpRequestException e)
         {
-            if (e.StatusCode == HttpStatusCode.Unauthorized && _authUrl != null && !retry)
+            if (e.StatusCode == HttpStatusCode.Unauthorized && _basicAuthUsername != null && !retry)
             {
-                await SetUsernameAndPassword(_authUrl, _basicAuthUsername!, _basicAuthPassword!);
+                await SetUsernameAndPassword(_basicAuthUsername, _basicAuthPassword!);
                 return await SendJsonAsync<TReq, TResp>(method, url, payload, true);
             }
             _logger.LogError(e, "{Method} {Url} failed", method, url);
